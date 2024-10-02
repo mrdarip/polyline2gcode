@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>polyline2gcode</title>
+</head>
+<body>
+    <main>
+        <label for="onCommand">power on command</label>
+        <input type="text" id="onCommand">
+
+        <label for="offCommand">power off command</label>
+        <input type="text" id="offCommand">
+
+        <label for="offSpeed">move speed (unit/min)</label>
+        <input type="number" id="offSpeed">
+
+        <label for="onSpeed">speed when engraving (unit/min)</label>
+        <input type="number" id="onSpeed">
+
+        <label for="polyline">input Polyline:</label>
+        <textarea name="polyline" id="polyline" cols="30" rows="10"></textarea>
+
+        <label for="gcode">output Gcode:</label>
+        <textarea name="gcode" id="gcode" cols="30" rows="10"></textarea>
+
+        <input type="button" value="convert" id="convert">
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
