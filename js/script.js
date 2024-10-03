@@ -40,15 +40,27 @@ function polylineToGcode(polyline) {
     minY = Infinity;
 
     polyline = JSON.parse(polyline);
-    console.log(polyline);
 
     gcode += offCommand.value + "\n";
     polyline.forEach(path => {
-        gcode += "G0 X" + path[0] + " Y" + path[1] + "\n"; //go to first path point
+        //skip empty paths
+        if(path.length == 0) {
+            return;
+        }
+
+        startPointX = path[0][0] * scaleInput.value;
+        startPointY = path[0][1] * scaleInput.value;
+        gcode += "G0 X" + startPointX + " Y" + startPointY + "\n"; //go to first path point
+
         gcode += "G0 F" + onSpeed.value + "\n";
         gcode += onCommand.value + "\n";
         
         path.forEach(point => {
+            //skip first point as we already moved to it
+            if(point == path[0]) {
+                return;
+            }
+
             pointX = point[0] * scaleInput.value;
             pointY = point[1] * scaleInput.value;
 
