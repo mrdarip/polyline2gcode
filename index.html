@@ -22,6 +22,11 @@
         <label for="onSpeed">Speed when engraving (unit/min):</label>
         <input type="number" id="onSpeed">
 
+        
+        <label for="scale">Scale points by:</label>
+        <input type="number" id="scale" value="1">
+        
+
         <label for="polyline">Input Polyline:</label>
         <textarea name="polyline" id="polyline" cols="30" rows="10"></textarea>
 
@@ -29,6 +34,13 @@
         <textarea name="gcode" id="gcode" cols="30" rows="10"></textarea>
 
         <input type="button" value="convert" id="convert">
+
+        <p>min x:<span id="minX"></span></p>
+        <p>max x:<span id="maxX"></span></p>
+        <p>min y:<span id="minY"></span></p>
+        <p>max y:<span id="maxY"></span></p>
+
+        <p>Copy the Gcode and paste it to your CNC machine</p>
     </main>
 
     <script src="./js/script.js"></script>
