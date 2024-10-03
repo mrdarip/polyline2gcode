@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>polyline2gcode</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <main>
-        <label for="onCommand">power on command</label>
+        <h1>Polyline to Gcode</h1>
+        <p>Useful to convert polyline from <a href="https://blot.hackclub.com/editor">Blot</a> or <a href="https://shinao.github.io/PathToPoints/">PathToPoints</a></p>
+        <label for="onCommand">Power on command:</label>
         <input type="text" id="onCommand">
 
-        <label for="offCommand">power off command</label>
+        <label for="offCommand">Power off command:</label>
         <input type="text" id="offCommand">
 
-        <label for="offSpeed">move speed (unit/min)</label>
+        <label for="offSpeed">Move speed (unit/min):</label>
         <input type="number" id="offSpeed">
 
-        <label for="onSpeed">speed when engraving (unit/min)</label>
+        <label for="onSpeed">Speed when engraving (unit/min):</label>
         <input type="number" id="onSpeed">
 
-        <label for="polyline">input Polyline:</label>
+        <label for="polyline">Input Polyline:</label>
         <textarea name="polyline" id="polyline" cols="30" rows="10"></textarea>
 
-        <label for="gcode">output Gcode:</label>
+        <label for="gcode">Output Gcode:</label>
         <textarea name="gcode" id="gcode" cols="30" rows="10"></textarea>
 
         <input type="button" value="convert" id="convert">
